@@ -1,0 +1,2 @@
+# LexAssert
+LexAssert extends Assert
