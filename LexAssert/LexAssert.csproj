@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
 	<VersionPrefix>0.1.0</VersionPrefix>
+	<Authors>Chris Molloy Wischer</Authors>
+	<Copyright>Share and Enjoy</Copyright>
+	<PackageProjectUrl>logopolis.uk/packages/lexassert</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/Logopolis/LexAssert</RepositoryUrl>
+	<PackageTags>xUnit;Assert</PackageTags>
+	<Description>Some useful equality Asserts for use with Xunit.</Description>
   </PropertyGroup>
 
   <ItemGroup>
