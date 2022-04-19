@@ -9,6 +9,7 @@
 	<RepositoryUrl>https://github.com/Logopolis/LexAssert</RepositoryUrl>
 	<PackageTags>xUnit;Assert</PackageTags>
 	<Description>Some useful equality Asserts for use with xUnit.</Description>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

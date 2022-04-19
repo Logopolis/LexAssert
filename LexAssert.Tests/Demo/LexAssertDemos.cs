@@ -48,6 +48,7 @@ namespace LexAssert.Tests.Demo
                 c => c.PropB);  // Passes, because PropC is not compared.
         }
 
+        [Fact]
         public void MembersEqual_Demo2()
         {
             var actual = "foo";

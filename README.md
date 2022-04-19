@@ -73,6 +73,7 @@ public void MembersEqual_Demo1()
 
 The functions comparing the two objects can be more complicated if needed:
 ```
+[Fact]
 public void MembersEqual_Demo2()
 {
     var actual = "foo";
