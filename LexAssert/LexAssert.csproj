@@ -8,7 +8,7 @@
 	<PackageProjectUrl>logopolis.uk/packages/lexassert</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/Logopolis/LexAssert</RepositoryUrl>
 	<PackageTags>xUnit;Assert</PackageTags>
-	<Description>Some useful equality Asserts for use with Xunit.</Description>
+	<Description>Some useful equality Asserts for use with xUnit.</Description>
   </PropertyGroup>
 
   <ItemGroup>
