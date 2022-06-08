@@ -16,7 +16,7 @@ namespace LexAssert.Tests.Demo
             var actual = new MyTestClass();
             var expected = new MyTestClass();
 
-            LexAssert.JsonEqual(expected, actual); // Passes
+            Lassert.JsonEqual(expected, actual); // Passes
         }
 
         internal class AnotherTestClass
@@ -43,7 +43,7 @@ namespace LexAssert.Tests.Demo
                 PropC = System.Guid.NewGuid()
             };
 
-            LexAssert.MembersEqual(expected, actual,
+            Lassert.MembersEqual(expected, actual,
                 c => c.PropA,
                 c => c.PropB);  // Passes, because PropC is not compared.
         }
@@ -54,7 +54,7 @@ namespace LexAssert.Tests.Demo
             var actual = "foo";
             var expected = "bar";
 
-            LexAssert.MembersEqual(expected, actual,
+            Lassert.MembersEqual(expected, actual,
                 c => c.ToLowerInvariant().Contains("z")); // Passes, because false == false.
         }
     }

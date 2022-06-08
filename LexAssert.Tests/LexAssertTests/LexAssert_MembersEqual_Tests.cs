@@ -25,7 +25,7 @@ namespace LexAssert.Tests.LexAssertTests
             };
 
             // Act, Assert
-            LexAssert.MembersEqual(x, y, c => c.FooString, c => c.BarInt);
+            Lassert.MembersEqual(x, y, c => c.FooString, c => c.BarInt);
         }
 
         [Fact]
@@ -48,7 +48,7 @@ namespace LexAssert.Tests.LexAssertTests
 
             // Act, Assert
             Assert.Throws<EqualException>(() =>
-                LexAssert.MembersEqual(x, y, c => c.FooString, c => c.BazBool));
+                Lassert.MembersEqual(x, y, c => c.FooString, c => c.BazBool));
         }
     }
 }

@@ -23,7 +23,7 @@ namespace LexAssert.Tests.LexAssertTests
             };
 
             // Act, Assert
-            LexAssert.JsonEqual(x, y);
+            Lassert.JsonEqual(x, y);
         }
 
         [Fact]
@@ -43,7 +43,7 @@ namespace LexAssert.Tests.LexAssertTests
             };
 
             // Act, Assert
-            Assert.Throws<EqualException>(() => LexAssert.JsonEqual(x, y));
+            Assert.Throws<EqualException>(() => Lassert.JsonEqual(x, y));
         }
     }
 }

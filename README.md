@@ -8,10 +8,10 @@ and an object with expected set of values.
 LexAssert provides ways of expressing that objects are "equal enough" for the purposes of an xUnit test.
 
 ## Public objects
-**LexAssert** exposes some new asserts for use with xUnit.
-**JsonEqualityComparer** is used by **LexAssert.JsonEqual** and can be used outside of this context if desired.
+**Lassert** exposes some new asserts for use with xUnit.
+**JsonEqualityComparer** is used by **Lassert.JsonEqual** and can be used outside of this context if desired.
 
-## Public methods of LexAssert
+## Public methods of Lassert
 **void JsonEqual<T>(T expected, T actual)** passes if expected and actual yield identical strings when serialized in Json. 
 Throws an EqualException if the serialized strings are not equal.
 
@@ -29,7 +29,7 @@ public void JsonEqual_Demo1()
     var actual = new MyTestClass();
     var expected = new MyTestClass();
 
-    LexAssert.JsonEqual(expected, actual); // Passes
+    Lassert.JsonEqual(expected, actual); // Passes
 }
 ```
 
@@ -65,7 +65,7 @@ public void MembersEqual_Demo1()
         PropC = System.Guid.NewGuid()
     };
 
-    LexAssert.MembersEqual(expected, actual,
+    Lassert.MembersEqual(expected, actual,
         c => c.PropA,
         c => c.PropB);  // Passes, because PropC is not compared.
 }
@@ -79,7 +79,7 @@ public void MembersEqual_Demo2()
     var actual = "foo";
     var expected = "bar";
 
-    LexAssert.MembersEqual(expected, actual,
+    Lassert.MembersEqual(expected, actual,
         c => c.ToLowerInvariant().Contains("z")); // Passes, because false == false.
 }
 ```

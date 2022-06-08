@@ -4,7 +4,7 @@ using Xunit;
 
 namespace LexAssert
 {
-    public class LexAssert : Assert
+    public class Lassert : Assert
     {
         public static void JsonEqual<T>(T expected, T actual)
         {
