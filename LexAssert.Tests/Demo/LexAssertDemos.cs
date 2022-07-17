@@ -1,4 +1,6 @@
-﻿using Xunit;
+﻿using System.Collections.Generic;
+
+using Xunit;
 
 namespace LexAssert.Tests.Demo
 {
@@ -6,8 +8,8 @@ namespace LexAssert.Tests.Demo
     {
         internal class MyTestClass
         {
-            string PropA => "foo";
-            int PropB => 63;
+            public string PropA => "foo";
+            public int PropB => 63;
         }
 
         [Fact]
@@ -15,6 +17,20 @@ namespace LexAssert.Tests.Demo
         {
             var actual = new MyTestClass();
             var expected = new MyTestClass();
+
+            Lassert.JsonEqual(expected, actual); // Passes
+        }
+
+        [Fact]
+        public void JsonEqual_Demo2()
+        {
+            var expected = new Dictionary<string, object>
+            {
+                { "PropA", "foo" },
+                { "PropB", 63 }
+            };
+
+            var actual = new MyTestClass();
 
             Lassert.JsonEqual(expected, actual); // Passes
         }

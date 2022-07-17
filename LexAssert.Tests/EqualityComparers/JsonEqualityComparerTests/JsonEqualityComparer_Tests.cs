@@ -1,13 +1,12 @@
-﻿using LexAssert.Exceptions;
+﻿using LexAssert.EqualityComparers;
 using LexAssert.Tests.TestClasses;
 
-using System.Collections.Generic;
-
 using Xunit;
+using Xunit.Sdk;
 
-namespace LexAssert.Tests.LexAssertTests
+namespace LexAssert.Tests.EqualityComparers.JsonEqualityComparerTests
 {
-    public class LexAssert_JsonEqual_Tests
+    public class JsonEqualityComparer_Tests
     {
         [Fact]
         public void ShouldPassWhenObjectsHaveEqualProperties()
@@ -26,28 +25,10 @@ namespace LexAssert.Tests.LexAssertTests
             };
 
             // Act, Assert
-            Lassert.JsonEqual(x, y);
-        }
-
-        [Fact]
-        public void ShouldPassWhenObjectsMakeEqualJsonAndIfObjectsAreDifferent()
-        {
-            // Arrange
-            var x = new SimpleTestClass
-            {
-                FooString = "Foo",
-                BarInt = 42,
-            };
-
-            var y = new Dictionary<string, object>()
-            {
-                { "FooString", "Foo" },
-                { "BarInt", 42 },
-                { "BazBool", false }
-            };
-
-            // Act, Assert
-            Lassert.JsonEqual(x, y);
+            Assert.Equal(
+                x,
+                y,
+                new JsonEqualityComparer<SimpleTestClass>());
         }
 
         [Fact]
@@ -67,11 +48,42 @@ namespace LexAssert.Tests.LexAssertTests
             };
 
             // Act, Assert
-            Assert.Throws<JsonEqualException>(() => Lassert.JsonEqual(x, y));
+            Assert.Throws<EqualException>(() =>
+                Assert.Equal(
+                    x,
+                    y,
+                    new JsonEqualityComparer<SimpleTestClass>())
+            );
         }
 
         [Fact]
-        public void ShouldBeAMessageWhenJsonEqualFails()
+        public void ShouldYieldSameHashCodesWhenObjectsHaveEqualProperties()
+        {
+            // Arrange
+            var x = new SimpleTestClass
+            {
+                FooString = "Foo",
+                BarInt = 42,
+            };
+
+            var y = new SimpleTestClass
+            {
+                FooString = "Foo",
+                BarInt = 42,
+            };
+
+            var ComparerUnderTest = new JsonEqualityComparer<SimpleTestClass>();
+            
+            // Act
+            var xHash = ComparerUnderTest.GetHashCode(x);
+            var yHash = ComparerUnderTest.GetHashCode(y);
+
+            // Assert
+            Assert.Equal(xHash, yHash);
+        }
+
+        [Fact]
+        public void ShouldYieldDifferentHashCodesWhenObjectsHaveDifferentProperties()
         {
             // Arrange
             var x = new SimpleTestClass
@@ -86,20 +98,14 @@ namespace LexAssert.Tests.LexAssertTests
                 BarInt = 43,
             };
 
+            var ComparerUnderTest = new JsonEqualityComparer<SimpleTestClass>();
+
             // Act
-            try
-            {
-                // This should throw a JsonEqualException.
-                // If not, the test "ShouldFailWhenObjectsDoNotHaveAllEqualProperties" will fail.
-                Lassert.JsonEqual(x, y); 
-            }
+            var xHash = ComparerUnderTest.GetHashCode(x);
+            var yHash = ComparerUnderTest.GetHashCode(y);
 
             // Assert
-            catch(JsonEqualException ex)
-            {
-                Assert.NotNull(ex.Message);
-                Assert.NotSame(string.Empty, ex.Message);
-            }
+            Assert.NotEqual(xHash, yHash);
         }
     }
 }

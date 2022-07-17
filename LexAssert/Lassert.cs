@@ -1,4 +1,7 @@
-﻿using LexAssert.EqualityComparers;
+﻿using LexAssert.Exceptions;
+
+using Newtonsoft.Json;
+
 using System;
 using Xunit;
 
@@ -6,9 +9,15 @@ namespace LexAssert
 {
     public class Lassert : Assert
     {
-        public static void JsonEqual<T>(T expected, T actual)
+        public static void JsonEqual(object expected, object actual)
         {
-            Equal(expected, actual, new JsonEqualityComparer<T>());
+            var expectedJson = JsonConvert.SerializeObject(expected);
+            var actualJson = JsonConvert.SerializeObject(actual);
+
+            if(expectedJson != actualJson)
+            {
+                throw new JsonEqualException(expectedJson, actualJson);
+            }
         }
 
         public static void MembersEqual<T>(
