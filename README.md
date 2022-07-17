@@ -16,7 +16,7 @@ LexAssert provides ways of expressing that objects are "equal enough" for the pu
 Throws an EqualException if the serialized strings are not equal.
 
 Examples:
-```
+```cs
 internal class MyTestClass
 {
     string PropA => "foo";
@@ -54,7 +54,7 @@ Throws an EqualException if the values are different.
 This can be used to specify which members of a type are important when comparing.
 
 Example:
-```
+```cs
 internal class AnotherTestClass
 {
     public string PropA { get; set; }
@@ -86,7 +86,7 @@ public void MembersEqual_Demo1()
 ```
 
 The functions comparing the two objects can be more complicated if needed:
-```
+```cs
 [Fact]
 public void MembersEqual_Demo2()
 {
