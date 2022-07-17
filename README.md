@@ -15,7 +15,7 @@ LexAssert provides ways of expressing that objects are "equal enough" for the pu
 **void JsonEqual<T>(T expected, T actual)** passes if expected and actual yield identical strings when serialized in Json. 
 Throws an EqualException if the serialized strings are not equal.
 
-Example:
+Examples:
 ```
 internal class MyTestClass
 {
@@ -30,6 +30,20 @@ public void JsonEqual_Demo1()
     var expected = new MyTestClass();
 
     Lassert.JsonEqual(expected, actual); // Passes
+}
+
+[Fact]
+public void JsonEqual_Demo2()
+{
+	var expected = new Dictionary<string, object>
+	{
+		{ "PropA", "foo" },
+		{ "PropB", 63 }
+	};
+
+	var actual = new MyTestClass();
+
+	Lassert.JsonEqual(expected, actual); // Passes, as both objects yield identical Json.
 }
 ```
 

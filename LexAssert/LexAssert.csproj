@@ -2,12 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-	<VersionPrefix>1.0.0</VersionPrefix>
+	<VersionPrefix>1.0.1</VersionPrefix>
 	<Authors>Chris Molloy Wischer</Authors>
 	<Copyright>Share and Enjoy</Copyright>
 	<PackageProjectUrl>logopolis.uk/packages/lexassert</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/Logopolis/LexAssert</RepositoryUrl>
 	<PackageTags>xUnit;Assert</PackageTags>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<Description>Some useful equality Asserts for use with xUnit.</Description>
 	<IsPackable>true</IsPackable>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
