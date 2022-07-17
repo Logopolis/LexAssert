@@ -7,7 +7,7 @@
 	<Copyright>Share and Enjoy</Copyright>
 	<PackageProjectUrl>logopolis.uk/packages/lexassert</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/Logopolis/LexAssert</RepositoryUrl>
-	<PackageTags>xUnit;Assert;Asserting;Testing;UnitTesting;Test</PackageTags>
+	<PackageTags>xUnit;Assert;Asserting;Testing;UnitTesting;Test;UnitTests</PackageTags>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<Description>Some useful equality Asserts for use with xUnit.</Description>
 	<IsPackable>true</IsPackable>
