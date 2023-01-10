@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-	<VersionPrefix>1.0.1</VersionPrefix>
+	<VersionPrefix>2.0</VersionPrefix>
 	<Authors>Chris Molloy Wischer</Authors>
 	<Copyright>Share and Enjoy</Copyright>
 	<PackageProjectUrl>logopolis.uk/packages/lexassert</PackageProjectUrl>
@@ -13,14 +13,14 @@
 	<IsPackable>true</IsPackable>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<AssemblyVersion>1.0.0</AssemblyVersion>
-	<FileVersion>1.0.0</FileVersion>
-	<PackageReleaseNotes>1. Output a useful error when Lassert.JsonEqual fails; 2. Make Lassert.JsonEqual non-generic so it does not need matching types in order to match Json outputs.</PackageReleaseNotes>
+	<AssemblyVersion>2.0.0</AssemblyVersion>
+	<FileVersion>2.0.0</FileVersion>
+	<PackageReleaseNotes>Major update: Switch engine from NewtonSoft to System.Text.Json</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
 	<PackageReference Include="JsonDiffPatch.Net" Version="2.3.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	<PackageReference Include="System.Text.Json" Version="7.0.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
   </ItemGroup>
 	

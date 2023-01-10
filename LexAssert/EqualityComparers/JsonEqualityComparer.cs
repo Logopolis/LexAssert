@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace LexAssert.EqualityComparers
 {
@@ -8,12 +7,12 @@ namespace LexAssert.EqualityComparers
     {
         public bool Equals(T x, T y)
         {
-            return JsonConvert.SerializeObject(x) == JsonConvert.SerializeObject(y);
+            return JsonSerializer.Serialize(x) == JsonSerializer.Serialize(y);
         }
 
         public int GetHashCode(T obj)
         {
-            return JsonConvert.SerializeObject(obj).GetHashCode();
+            return JsonSerializer.Serialize(obj).GetHashCode();
         }
     }
 }

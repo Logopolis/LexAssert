@@ -1,8 +1,8 @@
 ﻿using LexAssert.Exceptions;
 
-using Newtonsoft.Json;
-
 using System;
+using System.Text.Json;
+
 using Xunit;
 
 namespace LexAssert
@@ -11,8 +11,8 @@ namespace LexAssert
     {
         public static void JsonEqual(object expected, object actual)
         {
-            var expectedJson = JsonConvert.SerializeObject(expected);
-            var actualJson = JsonConvert.SerializeObject(actual);
+            var expectedJson = JsonSerializer.Serialize(expected);
+            var actualJson = JsonSerializer.Serialize(actual);
 
             if(expectedJson != actualJson)
             {

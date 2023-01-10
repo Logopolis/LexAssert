@@ -9,7 +9,7 @@ LexAssert provides ways of expressing that objects are "equal enough" for the pu
 
 ## Public objects
 **Lassert** exposes some new asserts for use with xUnit.
-**JsonEqualityComparer** is used by **Lassert.JsonEqual** and can be used outside of this context if desired.
+**JsonEqualityComparer** can be used to compare Json serializations of an object
 
 ## Public methods of Lassert
 **void JsonEqual<T>(T expected, T actual)** passes if expected and actual yield identical strings when serialized in Json. 
