@@ -1,9 +1,8 @@
-﻿using LexAssert.Exceptions;
-
-using System;
+﻿using System;
 using System.Text.Json;
 
 using Xunit;
+using Xunit.Sdk;
 
 namespace LexAssert
 {
@@ -16,7 +15,7 @@ namespace LexAssert
 
             if(expectedJson != actualJson)
             {
-                throw new JsonEqualException(expectedJson, actualJson);
+                throw EqualException.ForMismatchedValues(expectedJson, actualJson, "Lassert.JsonEqual() Failure");
             }
         }
 

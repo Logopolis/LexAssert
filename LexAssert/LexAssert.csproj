@@ -13,15 +13,16 @@
 	<IsPackable>true</IsPackable>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<AssemblyVersion>2.0.0</AssemblyVersion>
-	<FileVersion>2.0.0</FileVersion>
-	<PackageReleaseNotes>Major update: Switch engine from NewtonSoft to System.Text.Json</PackageReleaseNotes>
+	<AssemblyVersion>2.1.0</AssemblyVersion>
+	<FileVersion>2.1.0</FileVersion>
+	<PackageReleaseNotes>Remove use of unsupported AssertActualExpectedException</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
 	<PackageReference Include="JsonDiffPatch.Net" Version="2.3.0" />
 	<PackageReference Include="System.Text.Json" Version="7.0.1" />
-    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.abstractions" Version="2.0.3" />
   </ItemGroup>
 	
 	<ItemGroup>

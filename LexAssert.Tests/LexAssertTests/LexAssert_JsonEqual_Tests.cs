@@ -1,9 +1,9 @@
-﻿using LexAssert.Exceptions;
-using LexAssert.Tests.TestClasses;
+﻿using LexAssert.Tests.TestClasses;
 
 using System.Collections.Generic;
 
 using Xunit;
+using Xunit.Sdk;
 
 namespace LexAssert.Tests.LexAssertTests
 {
@@ -67,7 +67,7 @@ namespace LexAssert.Tests.LexAssertTests
             };
 
             // Act, Assert
-            Assert.Throws<JsonEqualException>(() => Lassert.JsonEqual(x, y));
+            Assert.Throws<EqualException>(() => Lassert.JsonEqual(x, y));
         }
 
         [Fact]
@@ -95,7 +95,7 @@ namespace LexAssert.Tests.LexAssertTests
             }
 
             // Assert
-            catch(JsonEqualException ex)
+            catch(EqualException ex)
             {
                 Assert.NotNull(ex.Message);
                 Assert.NotSame(string.Empty, ex.Message);
