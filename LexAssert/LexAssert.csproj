@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-	<VersionPrefix>2.2.0</VersionPrefix>
+	<VersionPrefix>2.2.1</VersionPrefix>
 	<Authors>Chris Molloy Wischer</Authors>
 	<Copyright>Share and Enjoy</Copyright>
 	<PackageProjectUrl>logopolis.uk/packages/lexassert</PackageProjectUrl>
@@ -13,9 +13,9 @@
 	<IsPackable>true</IsPackable>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<AssemblyVersion>2.1.0</AssemblyVersion>
-	<FileVersion>2.1.0</FileVersion>
-	<PackageReleaseNotes>Remove use of unsupported AssertActualExpectedException</PackageReleaseNotes>
+	<AssemblyVersion>2.2.1</AssemblyVersion>
+	<FileVersion>2.2.1</FileVersion>
+	<PackageReleaseNotes>Update dependencies and remove stale ones</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
