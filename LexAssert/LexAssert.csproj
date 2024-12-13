@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-	<VersionPrefix>2.1.0</VersionPrefix>
+	<VersionPrefix>2.2.0</VersionPrefix>
 	<Authors>Chris Molloy Wischer</Authors>
 	<Copyright>Share and Enjoy</Copyright>
 	<PackageProjectUrl>logopolis.uk/packages/lexassert</PackageProjectUrl>
@@ -19,9 +19,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="JsonDiffPatch.Net" Version="2.3.0" />
-	<PackageReference Include="System.Text.Json" Version="7.0.1" />
-    <PackageReference Include="xunit" Version="2.5.3" />
+	<PackageReference Include="System.Text.Json" Version="9.0.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
     <PackageReference Include="xunit.abstractions" Version="2.0.3" />
   </ItemGroup>
 	
