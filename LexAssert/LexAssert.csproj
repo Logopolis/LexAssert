@@ -15,7 +15,7 @@
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<AssemblyVersion>3.0.0</AssemblyVersion>
 	<FileVersion>3.0.0</FileVersion>
-	<PackageReleaseNotes>BREAKING CHANGE: Upgraded to .NET 8.0 and xUnit v3. Minimum requirements: .NET 8+ or .NET Framework 4.7.2+. Public API unchanged. See README for migration guide.</PackageReleaseNotes>
+	<PackageReleaseNotes>Updated dependencies for 3.0.1: System.Text.Json 9.0.6 → 10.0.9; xunit.v3.assert 3.0.0 → 3.2.2; xunit.v3.extensibility.core 3.0.0 → 3.2.2. Also updated test tooling dependencies. No public API changes.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
