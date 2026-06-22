@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-	<VersionPrefix>3.0.0</VersionPrefix>
+	<VersionPrefix>3.0.1</VersionPrefix>
 	<Authors>Chris Molloy Wischer</Authors>
 	<Copyright>Share and Enjoy</Copyright>
 	<PackageProjectUrl>logopolis.uk/packages/lexassert</PackageProjectUrl>
@@ -15,13 +15,13 @@
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<AssemblyVersion>3.0.0</AssemblyVersion>
 	<FileVersion>3.0.0</FileVersion>
-	<PackageReleaseNotes>BREAKING CHANGE: Upgraded to .NET 8.0 and xUnit v3. Minimum requirements: .NET 8+ or .NET Framework 4.7.2+. Public API unchanged. See README for migration guide.</PackageReleaseNotes>
+	<PackageReleaseNotes>Updated dependencies for 3.0.1: System.Text.Json 9.0.6 → 10.0.9; xunit.v3.assert 3.0.0 → 3.2.2; xunit.v3.extensibility.core 3.0.0 → 3.2.2. Also updated test tooling dependencies. No public API changes.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="System.Text.Json" Version="9.0.6" />
-    <PackageReference Include="xunit.v3.assert" Version="3.0.0" />
-    <PackageReference Include="xunit.v3.extensibility.core" Version="3.0.0" />
+	<PackageReference Include="System.Text.Json" Version="10.0.9" />
+	<PackageReference Include="xunit.v3.assert" Version="3.2.2" />
+	<PackageReference Include="xunit.v3.extensibility.core" Version="3.2.2" />
   </ItemGroup>
 	
 	<ItemGroup>
